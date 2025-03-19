@@ -1,0 +1,36 @@
+.box{
+    border: 2px solid rgb(108, 162, 185);
+    border-radius: 9px;
+    margin-top: 10px;
+    margin-left: 350px;
+    padding: 10px 10px;
+    padding-left: 30px;
+    height:100px ;
+    width: 300px;
+    align-items: center;
+    background-color: azure;
+}
+#todo{
+   
+    
+    border: 2px solid rgb(11, 204, 239);
+    border-radius: 9px;
+    align-items: center;
+    margin: auto;
+    width: 100px;
+    margin-top: 200px;
+    padding: auto;
+    text-align: center;
+}
+#taskList{
+    text-decoration: none;
+    color: rgb(10, 37, 37);
+}
+#addTaskBtn{
+    border: 2px solid black;
+    border-radius: 9px;
+}
+#taskInput{
+    border: 2px solid black;
+    border-radius: 9px;
+}

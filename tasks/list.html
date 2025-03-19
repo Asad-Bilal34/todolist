@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="list.css"> 
+</head>
+<body>
+    <p id="todo">ToDoList</p>
+    <div class="box">
+       
+        <input type="text" id="taskInput" placeholder="Enter task!">
+        <button id="addTaskBtn">add task</button>
+        <ul id="taskList"></ul>
+    </div>
+    
+    <script>
+        const taskInput=document.getElementById("taskInput")
+        const addTaskBtn=document.getElementById("addTaskBtn")
+        const taskList=document.getElementById("taskList")
+
+        addTaskBtn.addEventListener("click",function(){
+            const user_input = taskInput.value.trim();
+            if(user_input===""){
+                alert("Please Enter Task!");
+                return;
+            }
+            const newlist = document.createElement("li");
+            newlist.textContent = user_input;
+
+            const delbtn = document.createElement("button")
+            delbtn.textContent= "del"
+            delbtn.style.marginLeft = "10px";
+            delbtn.style.cursor = "pointer";
+
+
+            delbtn.addEventListener("click",function(){
+                taskList.removeChild(newlist)
+            });
+            newlist.appendChild(delbtn);
+
+            taskList.appendChild(newlist);
+
+            taskInput.value="";
+
+        });
+
+        
+
+
+    </script>
+</html>
